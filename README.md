@@ -279,6 +279,8 @@ Our comprehensive testing across different AI models reveals significant perform
 
 > **Implementation Example**: The [`scripts`](./scripts/) folder provides examples of how to implement this in a simple way, using SQLite for the database. In real applications, you can also index the database and filter with proper algorithms.
 
+> **Pro Tip**: Use root path detection with [`Project-Root`](https://github.com/NeaByteLab/Project-Root) to filter file paths and improve semantic search accuracy. This ensures the system gets proper context by matching project paths, resulting in more accurate and relevant content retrieval.
+
 ---
 
 ## 📄 License
