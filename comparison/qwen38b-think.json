@@ -1,0 +1,16 @@
+{
+  "model": "qwen3:8b",
+  "created_at": "2025-09-16T16:18:27.538181Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"content\":\"@@ /Volumes/Indexing/Calculator.ts\\n⋮... // File imports and module setup\\n│export class Calculator extends EventEmitter {\\n⋮... // Calculator class with arithmetic operations and history tracking\\n│    private history: Array\u003c{operation: string, operands: number[], result: number, timestamp: Date}\u003e = []\\n⋮... // Private history array to store calculation records\\n│    private readonly maxHistorySize: number = 100\\n⋮... // Maximum history entries limit\\n│    private currentResult: number = 0\\n⋮... // Current calculation result storage\\n│    constructor(maxHistory: number = 100)\\n⋮... // Constructor with max history size parameter\\n│    add(a: number, b: number): number\\n⋮... // Addition method with operand validation\\n│    subtract(a: number, b: number): number\\n⋮... // Subtraction method with operand validation\\n│    multiply(a: number, b: number): number\\n⋮... // Multiplication method with operand validation\\n│    divide(a: number, b: number): number\\n⋮... // Division method with zero division check\\n│    power(base: number, exponent: number): number\\n⋮... // Power operation method\\n│    sqrt(value: number): number\\n⋮... // Square root operation method with negativity check\\n│    getCurrentResult(): number\\n⋮... // Accessor for current result\\n│    getHistory(): Array\u003c{operation: string, operands: number[], result: number, timestamp: Date}\u003e\\n⋮... // History retrieval method\\n│    clearHistory(): void\\n⋮... // History clearing method\\n│    getHistoryCount(): number\\n⋮... // History entry count getter\\n│    private validateOperands(...operands: number[]): void\\n⋮... // Private operand validation method\\n│    private addToHistory(operation: string, operands: number[], result: number): void\\n⋮... // Private history entry addition method\\n│    reset(): void\\n⋮... // Reset calculator to initial state\\n│    getStats(): {totalCalculations: number, operationsCount: Record\u003cstring, number\u003e, lastCalculation?: Date, currentResult: number}\\n⋮... // Statistics summary method\\n│}\",\"description\":\"A comprehensive calculator class that performs basic arithmetic operations (addition, subtraction, multiplication, division, power, and square root) with built-in history tracking, error handling, and statistical reporting features. It maintains a record of all calculations with timestamps and provides methods to retrieve and manage the history.\",\"keywords\":\"calculator class methods, arithmetic operations math, addition subtraction functions, calculation history tracking, constructor initialization setup, javascript utility class\"}\n"
+  },
+  "done_reason": "stop",
+  "done": true,
+  "total_duration": 54652320417,
+  "load_duration": 90349000,
+  "prompt_eval_count": 3785,
+  "prompt_eval_duration": 587758916,
+  "eval_count": 547,
+  "eval_duration": 53890858875
+}

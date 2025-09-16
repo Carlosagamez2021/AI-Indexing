@@ -236,35 +236,40 @@ Our comprehensive testing across different AI models reveals significant perform
 - **Dataset**: 100+ code files across multiple languages (TypeScript, Python, JavaScript, Go)
 - **Metrics**: Processing time per file and accuracy of generated repository maps
 - **Accuracy**: Measured by manual review of symbol extraction, signature correctness, and context preservation
+- **Test Environment**: MacBook Pro (M3 Pro, 11 cores, 18GB RAM) running macOS 26.0
 
 **📋 [View Testing Documentation](./testing.md)** - _Detailed testing procedures and methodology_
 
-| Model                             | Speed | Accuracy | Think Mode | Recommendation            |
-| --------------------------------- | ----- | -------- | ---------- | ------------------------- |
-| **gpt-oss:20b** (think-low)       | 1.38s | 82%      | Low        | ⭐ **Fast Processing**    |
-| **deepseek-v3.1:671b** (no-think) | 2.05s | 90%      | No         | ⭐ **Best Overall**       |
-| **gpt-oss:20b** (no-think)        | 2.33s | 75%      | No         | ⚠️ **Fast but Basic**     |
-| **qwen3-coder:480b** (no-think)   | 2.43s | 80%      | No         | ⭐ **Fast & Good**        |
-| **deepseek-v3.1:671b** (think)    | 2.51s | 95%      | Yes        | ⭐ **Most Accurate**      |
-| **gpt-oss:120b** (think-low)      | 3.70s | 92%      | Low        | ⭐ **Good Speed/Quality** |
-| **gpt-oss:120b** (no-think)       | 4.90s | 85%      | No         | ⭐ **Good Balance**       |
-| **qwen3-coder:480b** (think)      | 4.80s | 85%      | Yes        | ⭐ **Reliable**           |
-| **gpt-oss:120b** (think-medium)   | 5.34s | 95%      | Medium     | ⭐ **Balanced**           |
-| **gpt-oss:120b** (think-high)     | 13.9s | 98%      | High       | ⭐ **Most Precise**       |
-| **gpt-oss:20b** (think-high)      | 24.1s | 88%      | High       | ⚠️ **Slow but Detailed**  |
-| **gpt-oss:20b** (think-medium)    | 24.1s | 85%      | Medium     | ⚠️ **Slow Processing**    |
+### 🌐 Cloud Models
 
-**Performance Insights:**
+| Model                             | Speed      | Accuracy | Duration | Content | Think Mode | Recommendation            |
+| --------------------------------- | ---------- | -------- | -------- | ------- | ---------- | ------------------------- |
+| **deepseek-v3.1:671b** (no-think) | 50.85 t/s  | 70%      | 11.99s   | 2,117   | No         | ⭐ **Good Content**       |
+| **deepseek-v3.1:671b** (think)    | 63.58 t/s  | 65%      | 86.74s   | 1,503   | Yes        | ⚠️ **Slow but Detailed**  |
+| **gpt-oss:120b** (no-think)       | 141.99 t/s | 70%      | 7.21s    | 1,364   | No         | ⭐ **Fast & Good**        |
+| **gpt-oss:120b** (think-high)     | 185.83 t/s | 60%      | 45.66s   | 672     | High       | ⚠️ **Fast but Short**     |
+| **gpt-oss:120b** (think-low)      | 148.75 t/s | 70%      | 4.15s    | 1,707   | Low        | ⭐ **Best Balance**       |
+| **gpt-oss:120b** (think-medium)   | 170.24 t/s | 65%      | 7.32s    | 1,521   | Medium     | ⭐ **Good Speed/Quality** |
+| **gpt-oss:20b** (no-think)        | 216.40 t/s | 70%      | 37.65s   | 1,174   | No         | ⭐ **Fast Processing**    |
+| **gpt-oss:20b** (think-high)      | 0.00 t/s   | 0%       | 0.00s    | 0       | High       | ❌ **Failed**             |
+| **gpt-oss:20b** (think-low)       | 0.00 t/s   | 0%       | 0.00s    | 0       | Low        | ❌ **Failed**             |
+| **gpt-oss:20b** (think-medium)    | 318.40 t/s | 70%      | 5.27s    | 1,223   | Medium     | ⭐ **Fastest**            |
+| **qwen3-coder:480b** (no-think)   | 72.75 t/s  | 70%      | 8.47s    | 2,223   | No         | ⭐ **Best Content**       |
 
-- **Think Mode**: Higher levels boost accuracy 5-15% but increase processing time 2-10x
-- **Model Size**: 120B models consistently outperform 20B, especially with think modes
-- **Speed Tiers**:
-  - **Ultra-Fast** (1-3s): Basic processing for simple codebases
-  - **Fast** (3-6s): Good balance for most use cases
-  - **Balanced** (5-15s): Optimal production performance
-  - **Precise** (15-25s): Maximum accuracy for complex codebases
-- **Top Performers**: GPT-OSS 120B (think-high) hits 98% accuracy; deepseek-v3.1:671b offers best value
-- **Resource Trade-off**: Think modes deliver superior results at 2-10x processing cost
+### 🏠 Offline/Local Models
+
+| Model                              | Speed     | Accuracy | Duration | Content | Think Mode | Recommendation           |
+| ---------------------------------- | --------- | -------- | -------- | ------- | ---------- | ------------------------ |
+| **qwen2.5-coder:1.5b** (no-think)  | 27.63 t/s | 55%      | 11.40s   | 1,055   | No         | ⚠️ **Fair Quality**      |
+| **qwen3:1.7b** (no-think)          | 23.41 t/s | 70%      | 13.54s   | 1,058   | No         | ⭐ **Good Performance**  |
+| **qwen3:1.7b** (think)             | 44.13 t/s | 70%      | 6.00s    | 779     | Yes        | ⭐ **Good Balance**      |
+| **qwen3:4b-instruct** (no-think)   | 14.30 t/s | 70%      | 46.08s   | 2,454   | No         | ⭐ **Good but Slow**     |
+| **qwen3:8b** (no-think)            | 6.57 t/s  | 70%      | 84.40s   | 2,035   | No         | ⚠️ **Very Slow**         |
+| **qwen3:8b** (think)               | 10.00 t/s | 70%      | 54.65s   | 2,040   | Yes        | ⚠️ **Slow but Detailed** |
+| **deepcoder:1.5b** (no-think)      | 39.74 t/s | 30%      | 17.19s   | 787     | No         | ❌ **Poor Performance**  |
+| **deepseek-coder:1.3b** (no-think) | 16.76 t/s | 10%      | 8.77s    | 175     | No         | ❌ **Very Poor**         |
+
+> **💻 Hardware Specifications**: All offline models tested on MacBook Pro (M3 Pro, 11 cores, 18GB RAM) running macOS 26.0
 
 **📁 [View Detailed Comparison Results](./comparison)** - _Raw performance data and test results_
 
@@ -274,7 +279,12 @@ Our comprehensive testing across different AI models reveals significant perform
 
 - **Improve Semantic Accuracy**: Filter by nearest path to enhance search precision
 - **Targeted Context**: Use specific file targeting and edit prompts to include relevant context
-- **Offline Capability**: We recommend **qwen3** for complex prompts or multi-step workflows
+- **Cloud Models**: We recommend **GPT-OSS 20B (think-medium)** for fastest processing (318.40 tokens/s)
+- **Best Balance**: Use **GPT-OSS 120B (think-low)** for optimal speed/quality balance (148.75 tokens/s, 70% accuracy)
+- **Offline Capability**: Use **Qwen3:1.7b (think)** for best offline performance (44.13 tokens/s, 70% accuracy)
+- **Content Quality**: Use **Qwen3-coder:480b (no-think)** for richest content (2,223 characters)
+- **Reliability**: Use **DeepSeek models (clouds)** for 100% success rate
+- **Avoid**: **deepcoder:1.5b** and **deepseek-coder:1.3b** performed poorly (30% and 10% scores)
 - **Result**: LLM will never be confused again with no complexity behind the scenes
 
 > **Implementation Example**: The [`scripts`](./scripts/) folder provides examples of how to implement this in a simple way, using SQLite for the database. In real applications, you can also index the database and filter with proper algorithms.
