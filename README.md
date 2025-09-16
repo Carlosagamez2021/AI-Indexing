@@ -1,5 +1,9 @@
 # Code Indexing Prompts & Testing
 
+<div align="center">
+  <img src="./screenshoot/preview.png" alt="Tool Calling and Semantic Search in Action" width="800" />
+</div>
+
 > This folder contains prompts and testing for converting source code into structured repository maps that look like Aider's repomap format. The maps contain key symbols (classes, functions, interfaces) with their signatures, optimized for semantic search and LLM understanding. [Reference: Aider Repomap](https://aider.chat/docs/repomap.html)
 
 ### **What's Included**
@@ -8,6 +12,34 @@
 2. **Testing Data** - Performance comparison across different models
 3. **Examples** - Sample code and expected repository map outputs
 4. **Documentation** - How to use the prompts for indexing
+5. **CLI Scripts** - Ready-to-use tool calling examples and workflows ([📁 View Scripts](./scripts/))
+
+### **🚀 Quick Start with CLI Scripts**
+
+Get started immediately with our command-line interface that provides ready-to-use examples:
+
+```bash
+# Initialize the database
+npx tsx ./scripts/index.ts init
+
+# Index your codebase
+npx tsx ./scripts/index.ts indexing
+
+# Run tool calling example
+npx tsx ./scripts/index.ts tool-calling
+
+# Show help
+npx tsx ./scripts/index.ts help
+```
+
+> **⚠️ Configuration Required**: Set your API key if you're using the Ollama endpoint. Edit the code in the `./scripts` folder to configure your credentials.
+
+**Available Commands:**
+
+- `init` - Initialize the database with proper schema
+- `indexing` - Process and index your entire codebase
+- `tool-calling` - Demonstrate semantic search and tool calling workflow
+- `help` - Display available commands and usage
 
 **Example:**
 
@@ -235,6 +267,17 @@ Our comprehensive testing across different AI models reveals significant perform
 - **Resource Trade-off**: Think modes deliver superior results at 2-10x processing cost
 
 **📁 [View Detailed Comparison Results](./comparison)** - _Raw performance data and test results_
+
+---
+
+## 💡 Pro Tips & Best Practices
+
+- **Improve Semantic Accuracy**: Filter by nearest path to enhance search precision
+- **Targeted Context**: Use specific file targeting and edit prompts to include relevant context
+- **Offline Capability**: We recommend **qwen3** for complex prompts or multi-step workflows
+- **Result**: LLM will never be confused again with no complexity behind the scenes
+
+> **Implementation Example**: The [`scripts`](./scripts/) folder provides examples of how to implement this in a simple way, using SQLite for the database. In real applications, you can also index the database and filter with proper algorithms.
 
 ---
 
