@@ -1,7 +1,7 @@
 # Code Indexing Prompts & Testing
 
 <div align="center">
-  <img src="./screenshoot/preview.png" alt="Tool Calling and Semantic Search in Action" width="800" />
+  <img src="./screenshot/preview.png" alt="Tool Calling and Semantic Search in Action" width="800" />
 </div>
 
 > This folder contains prompts and testing for converting source code into structured repository maps that look like Aider's repomap format. The maps contain key symbols (classes, functions, interfaces) with their signatures, optimized for semantic search and LLM understanding. [Reference: Aider Repomap](https://aider.chat/docs/repomap.html)
