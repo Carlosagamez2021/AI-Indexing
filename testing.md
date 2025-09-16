@@ -1,11 +1,14 @@
 ## Endpoint
+
 https://ollama.com/api/chat
 
 ## Headers
+
 - Key: Authorization
-  Value: xxxxxxxxxxxxxx
+- Value: xxxxxxxxxxxxxx
 
 ## Body
+
 ```json
 {
     "model": "qwen3-coder:480b",
@@ -41,7 +44,7 @@ https://ollama.com/api/chat
             "keywords"
         ]
     },
-    "think": (true or false),
+    "think": (true, false, 'low', 'medium', 'high'),
     "stream": false
 }
 ```

@@ -207,19 +207,32 @@ Our comprehensive testing across different AI models reveals significant perform
 
 **📋 [View Testing Documentation](./testing.md)** - _Detailed testing procedures and methodology_
 
-| Model                             | Speed | Accuracy | Recommendation             |
-| --------------------------------- | ----- | -------- | -------------------------- |
-| **deepseek-v3.1:671b** (no-think) | 2.05s | 90%      | ⭐ **Best Overall**        |
-| **deepseek-v3.1:671b** (think)    | 2.51s | 95%      | ⭐ **Most Accurate**       |
-| **qwen3-coder:480b** (no-think)   | 2.43s | 80%      | ⭐ **Fast & Good**         |
-| **gpt-oss:20b** (no-think)        | 2.33s | 60%      | ⚠️ **Fast but Inaccurate** |
+| Model                             | Speed | Accuracy | Think Mode | Recommendation            |
+| --------------------------------- | ----- | -------- | ---------- | ------------------------- |
+| **gpt-oss:20b** (think-low)       | 1.38s | 82%      | Low        | ⭐ **Fast Processing**    |
+| **deepseek-v3.1:671b** (no-think) | 2.05s | 90%      | No         | ⭐ **Best Overall**       |
+| **gpt-oss:20b** (no-think)        | 2.33s | 75%      | No         | ⚠️ **Fast but Basic**     |
+| **qwen3-coder:480b** (no-think)   | 2.43s | 80%      | No         | ⭐ **Fast & Good**        |
+| **deepseek-v3.1:671b** (think)    | 2.51s | 95%      | Yes        | ⭐ **Most Accurate**      |
+| **gpt-oss:120b** (think-low)      | 3.70s | 92%      | Low        | ⭐ **Good Speed/Quality** |
+| **gpt-oss:120b** (no-think)       | 4.90s | 85%      | No         | ⭐ **Good Balance**       |
+| **qwen3-coder:480b** (think)      | 4.80s | 85%      | Yes        | ⭐ **Reliable**           |
+| **gpt-oss:120b** (think-medium)   | 5.34s | 95%      | Medium     | ⭐ **Balanced**           |
+| **gpt-oss:120b** (think-high)     | 13.9s | 98%      | High       | ⭐ **Most Precise**       |
+| **gpt-oss:20b** (think-high)      | 24.1s | 88%      | High       | ⚠️ **Slow but Detailed**  |
+| **gpt-oss:20b** (think-medium)    | 24.1s | 85%      | Medium     | ⚠️ **Slow Processing**    |
 
 **Performance Insights:**
 
-- **Speed vs Accuracy Trade-off**: Models with "think" mode show higher accuracy but slower processing
-- **Model Size Impact**: Larger models generally provide better accuracy but require more resources
-- **Consistency**: deepseek-v3.1 shows the most consistent performance across different code types
-- **Resource Usage**: Consider your infrastructure capabilities when choosing between speed and accuracy
+- **Think Mode**: Higher levels boost accuracy 5-15% but increase processing time 2-10x
+- **Model Size**: 120B models consistently outperform 20B, especially with think modes
+- **Speed Tiers**:
+  - **Ultra-Fast** (1-3s): Basic processing for simple codebases
+  - **Fast** (3-6s): Good balance for most use cases
+  - **Balanced** (5-15s): Optimal production performance
+  - **Precise** (15-25s): Maximum accuracy for complex codebases
+- **Top Performers**: GPT-OSS 120B (think-high) hits 98% accuracy; deepseek-v3.1:671b offers best value
+- **Resource Trade-off**: Think modes deliver superior results at 2-10x processing cost
 
 **📁 [View Detailed Comparison Results](./comparison)** - _Raw performance data and test results_
 
