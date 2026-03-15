@@ -1,0 +1,12 @@
+{
+  "name": "Carlosagamez2021/AI-Indexing",
+  "description": "🚀 Simplify code indexing with structured prompts and testing, optimizing source code for semantic search and understanding in LLMs.",
+  "accepts": [
+    {
+      "network": "eip155:8453",
+      "asset": "USDC",
+      "address": "YOUR_WALLET_ADDRESS"
+    }
+  ],
+  "resources": []
+}
